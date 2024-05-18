@@ -1,0 +1,164 @@
+% \documentclass{report}
+\documentclass[12pt]{report}
+%\documentclass[a4paper,12pt]{report}
+
+% IMPORT PACKAGE
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{geometry} 
+\usepackage{graphicx}
+\usepackage[french]{babel}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{listings}
+\usetikzlibrary{shapes, arrows}
+% PADDING
+\newgeometry{
+    top = 0.75in,
+    bottom = 0.75in,
+    outer =0.75in,
+    inner = 0.75in,
+}
+
+\setlength{\headheight}{61.25652pt}
+% Insérer une page blanche sans en-tête et sans pied de page
+\newcommand\EmptyPage{
+    \newpage
+    \null
+    \thispagestyle{empty}
+    \addtocounter{page}{-1}
+    \newpage}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+
+% FRONT COVER
+\renewcommand{\titlepage}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{Includes/Images/pageDeGarde2.jpg}};
+  \end{tikzpicture}%
+}
+
+% HEAD & FOOTER
+\fancypagestyle{plain}{% Redefine plain style
+    \fancyhf{} % Clear header and footer
+
+    \fancyhead[R]{\includegraphics[width=2cm]{Includes/Images/universitedecorse.png}}
+  
+    % Includes/Images/universitedecorse.png
+    \fancyhead[C]{Rapport d'activité stage, 4 semaines.}
+
+    \fancyhead[L]{\includegraphics[width=2cm]{Includes/Images/Dept_Marketplaces_Logo.png}}
+    
+
+    \fancyfoot[R]{18/05/2024} % Ajout du comptage de page
+    \fancyfoot[C]{\thepage}
+    \fancyfoot[L]{Anthony Menghi}
+}
+% Apply "plain" page style to all pages
+\pagestyle{plain}
+
+% \title{Rapport de Stage - BUT MMI 2 \\ \Large Università di Corsica Pasquale Paoli}
+% \author{Anthony Menghi}
+% \date{June 2023}
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+\thispagestyle{empty} %enelver le page de style sur la page de couverture 
+\maketitle 
+\EmptyPage
+% COVER PAGE
+\include{Includes/PageGarde/pageGarde}
+\include{Includes/PageGarde/pageGarde2}
+\EmptyPage
+\include{Includes/nonPlagiat}
+\EmptyPage
+
+% NOTE READER
+\include{Includes/noteLecture}
+\EmptyPage
+% ABSTRACTS
+\include{Includes/synthese}
+\EmptyPage
+% \include{Includes/Abstracts/abstract}
+% \EmptyPage
+% \include{Includes/Abstracts/riassuntu}
+% \EmptyPage
+% ACKNOWLEDGEMENTS
+% \include{Includes/remerciements}
+% \EmptyPage
+% TABLES OF COTENT
+\tableofcontents
+\EmptyPage
+% INTRODUCTION
+\include{Includes/Introduction/introduction}
+\include{Includes/Introduction/introduction2}
+
+\EmptyPage
+% CONTEXT
+\include{Includes/Contexte/contexte}
+% \include{Includes/Contexte/contexte2}
+% \include{Includes/Contexte/contexte3}
+% \include{Includes/Contexte/contexte4}
+
+\EmptyPage
+
+% DEVELOPMENT CONTEXT
+% \include{Includes/contexteDeveloppement}
+\EmptyPage
+
+% creationInterface
+% \include{Includes/creationInterface}
+\EmptyPage
+% CONCLUSIONS
+% \include{Includes/conclusion}
+\EmptyPage
+% TABLES OF FIGURES
+\listoffigures
+
+\EmptyPage
+% \include{Includes/annexe}
+
+\end{document}
+
+
+
+
+% Page de garde, 
+% Page de Titre, 
+% Engagement de non plagiat, 
+% Note de lecture, 
+% Synthèse,
+% Remmerciement, 
+% Table des matières, 
+% Introduction
+% Contexte
+% Perspectives personnelles
+% Présentation de l’entreprise et des projets associés
+% Contexte de développement
+
+% Cahier des charge 
+% Gestion du temps
+% Communication et gestion de projets
+% Mise en relation des différents outils
+% Découverte & tests
+% Relume
+% Webflow
+% DevLink
+% Reflexion sur les difféntes possibilité d'interactions entre les outils
+% Logique de développement avec Headless CMS
+% Les pour et les contres
+% Conclusion
+% Webographie
+% Tables des figures
+% Annexe
