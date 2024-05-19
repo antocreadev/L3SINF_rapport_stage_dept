@@ -15,15 +15,18 @@
 \usepackage{titlesec}
 \usepackage{listings}
 \usetikzlibrary{shapes, arrows}
+
 % PADDING
-\newgeometry{
-    top = 0.75in,
-    bottom = 0.75in,
-    outer =0.75in,
-    inner = 0.75in,
+\geometry{
+  a4paper,
+  left=20mm,
+  right=20mm,
+  headheight=2cm,
+  top=3cm,
+  bottom=5cm,
+  footskip=4cm
 }
 
-\setlength{\headheight}{61.25652pt}
 % Insérer une page blanche sans en-tête et sans pied de page
 \newcommand\EmptyPage{
     \newpage
@@ -48,23 +51,35 @@
 }
 
 % HEAD & FOOTER
-\fancypagestyle{plain}{% Redefine plain style
-    \fancyhf{} % Clear header and footer
+\pagestyle{fancy}
 
-    \fancyhead[R]{\includegraphics[width=2cm]{Includes/Images/universitedecorse.png}}
+\fancyhead[L]{\includegraphics[width=2cm]{Includes/Images/Dept_Marketplaces_Logo.png}}
+\fancyhead[C]{Rapport d'activité stage, 4 semaines.}
+\fancyhead[R]{\includegraphics[width=1.5cm]{Includes/Images/universitedecorse.png}}
+
+\fancyfoot[L]{Anthony Menghi}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\today}
+
+\fancypagestyle{plain}{\pagestyle{fancy}}
+
+% \fancypagestyle{plain}{% Redefine plain style
+%     \fancyhf{} % Clear header and footer
+
+%     \fancyhead[R]{\includegraphics[width=2cm]{Includes/Images/universitedecorse.png}}
   
-    % Includes/Images/universitedecorse.png
-    \fancyhead[C]{Rapport d'activité stage, 4 semaines.}
+%     % Includes/Images/universitedecorse.png
+%     \fancyhead[C]{Rapport d'activité stage, 4 semaines.}
 
-    \fancyhead[L]{\includegraphics[width=2cm]{Includes/Images/Dept_Marketplaces_Logo.png}}
+%     \fancyhead[L]{\includegraphics[width=2cm]{Includes/Images/Dept_Marketplaces_Logo.png}}
     
 
-    \fancyfoot[R]{18/05/2024} % Ajout du comptage de page
-    \fancyfoot[C]{\thepage}
-    \fancyfoot[L]{Anthony Menghi}
-}
-% Apply "plain" page style to all pages
-\pagestyle{plain}
+%     \fancyfoot[R]{18/05/2024} % Ajout du comptage de page
+%     \fancyfoot[C]{\thepage}
+%     \fancyfoot[L]{Anthony Menghi}
+% }
+% % Apply "plain" page style to all pages
+% \pagestyle{plain}
 
 % \title{Rapport de Stage - BUT MMI 2 \\ \Large Università di Corsica Pasquale Paoli}
 % \author{Anthony Menghi}
@@ -78,8 +93,7 @@
 \maketitle 
 \EmptyPage
 % COVER PAGE
-\include{Includes/PageGarde/pageGarde}
-\include{Includes/PageGarde/pageGarde2}
+\include{Includes/pageGarde}
 \EmptyPage
 \include{Includes/nonPlagiat}
 \EmptyPage
@@ -101,17 +115,14 @@
 \tableofcontents
 \EmptyPage
 % INTRODUCTION
-\include{Includes/Introduction/introduction}
-\include{Includes/Introduction/introduction2}
+\include{Includes/introduction}
 
 \EmptyPage
 % CONTEXT
-\include{Includes/Contexte/contexte}
-% \include{Includes/Contexte/contexte2}
-% \include{Includes/Contexte/contexte3}
-% \include{Includes/Contexte/contexte4}
-
+\include{Includes/contexteCahierEtDesCharges}
 \EmptyPage
+\include{Includes/realisationCreationDeLaSolution}
+
 
 % DEVELOPMENT CONTEXT
 % \include{Includes/contexteDeveloppement}
@@ -134,22 +145,6 @@
 
 
 
-% Page de garde, 
-% Page de Titre, 
-% Engagement de non plagiat, 
-% Note de lecture, 
-% Synthèse,
-% Remmerciement, 
-% Table des matières, 
-% Introduction
-% Contexte
-% Perspectives personnelles
-% Présentation de l’entreprise et des projets associés
-% Contexte de développement
-
-% Cahier des charge 
-% Gestion du temps
-% Communication et gestion de projets
 % Mise en relation des différents outils
 % Découverte & tests
 % Relume
