@@ -1,6 +1,4 @@
-% \documentclass{report}
 \documentclass[12pt]{report}
-%\documentclass[a4paper,12pt]{report}
 
 % IMPORT PACKAGE
 \usepackage{lmodern}
@@ -63,27 +61,6 @@
 
 \fancypagestyle{plain}{\pagestyle{fancy}}
 
-% \fancypagestyle{plain}{% Redefine plain style
-%     \fancyhf{} % Clear header and footer
-
-%     \fancyhead[R]{\includegraphics[width=2cm]{Includes/Images/universitedecorse.png}}
-  
-%     % Includes/Images/universitedecorse.png
-%     \fancyhead[C]{Rapport d'activité stage, 4 semaines.}
-
-%     \fancyhead[L]{\includegraphics[width=2cm]{Includes/Images/Dept_Marketplaces_Logo.png}}
-    
-
-%     \fancyfoot[R]{18/05/2024} % Ajout du comptage de page
-%     \fancyfoot[C]{\thepage}
-%     \fancyfoot[L]{Anthony Menghi}
-% }
-% % Apply "plain" page style to all pages
-% \pagestyle{plain}
-
-% \title{Rapport de Stage - BUT MMI 2 \\ \Large Università di Corsica Pasquale Paoli}
-% \author{Anthony Menghi}
-% \date{June 2023}
 \title{}
 \author{}
 \date{}
@@ -91,51 +68,45 @@
 \begin{document}
 \thispagestyle{empty} %enelver le page de style sur la page de couverture 
 \maketitle 
-\EmptyPage
+% \EmptyPage
 % COVER PAGE
 \include{Includes/pageGarde}
-\EmptyPage
+% \EmptyPage
 \include{Includes/nonPlagiat}
-\EmptyPage
-
+% \EmptyPage
 % NOTE READER
 \include{Includes/noteLecture}
-\EmptyPage
+% \EmptyPage
+\include{Includes/remerciements}
+% \EmptyPage
 % ABSTRACTS
 \include{Includes/synthese}
-\EmptyPage
-% \include{Includes/Abstracts/abstract}
-% \EmptyPage
-% \include{Includes/Abstracts/riassuntu}
-% \EmptyPage
-% ACKNOWLEDGEMENTS
-% \include{Includes/remerciements}
 % \EmptyPage
 % TABLES OF COTENT
 \tableofcontents
-\EmptyPage
+% \EmptyPage
 % INTRODUCTION
 \include{Includes/introduction}
 
-\EmptyPage
+% \EmptyPage
 % CONTEXT
 \include{Includes/contexteCahierEtDesCharges}
-\EmptyPage
+% \EmptyPage
 \include{Includes/realisationCreationDeLaSolution}
 % DEVELOPMENT CONTEXT
 % \include{Includes/contexteDeveloppement}
-\EmptyPage
+% \EmptyPage
 \include{Includes/bilan}
 % creationInterface
 % \include{Includes/creationInterface}
-\EmptyPage
+% \EmptyPage
 % CONCLUSIONS
 \include{Includes/conclusion}
-\EmptyPage
+% \EmptyPage
 % TABLES OF FIGURES
 \listoffigures
 \include{Includes/webographie}
 
-\EmptyPage
+% \EmptyPage
 \end{document}
 
