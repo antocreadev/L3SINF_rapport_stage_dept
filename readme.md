@@ -1,5 +1,14 @@
-À mettre dans le .zprofile :
+# Rapport de stage en LaTeX pour l'Université de Corse Pasquale Paoli
 
+Stage réalisé chez DEPT Agency, Irlande.
+
+L3 Sciences pour l'Ingénieur parcours Informatique.
+
+Anthony Menghi - antocreadev
+
+# Lancer le projet 
+
+À mettre dans le .zprofile :
 ```sh
 # TEXLIVE
 export TEXLIVE_HOME="/usr/local/texlive/2024basic"
@@ -9,7 +18,6 @@ export PATH=$PATH:"/Library/TeX/texbin/"
 ```
 
 run sh :
-
 ```sh
 brew install basictex
 curl -o update-tlmgr.sh https://mirror.ibcp.fr/pub/CTAN/systems/texlive/tlnet/update-tlmgr-latest.sh
@@ -33,12 +41,9 @@ sudo tlmgr install cm-super
 sudo chown -R $USER /usr/local/texlive
 ```
 
-Supprimer vscode pdf
-
-installer latex workshop
-
-À mettre dans le setting.json de vscode
-
+1. Supprimer vscode pdf
+2. Installer latex workshop
+3. À mettre dans le setting.json de vscode :
 ```json
 "latex-workshop.synctex.path": "/Library/TeX/texbin/synctex",
   "latex-workshop.kpsewhich.path": "/Library/TeX/texbin/kpsewhich",
